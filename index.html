@@ -7,14 +7,34 @@
 </head>
 <body>
     <nav>
-        <h3>Achievement Atlas</h3>
-        <button class="nav-button">
-            Text
-        </button>
+        <h3 href="#intro">Achievement Atlas</h3>
+        <a class="section-button" href="#">Services</a>
+        <a class="section-button" href="#">Reviews</a>
+        <a class="section-button" href="#">FAQ</a>
+        <button class="section-button-colored" href="#">See Pricing</button>
     </nav>
+
+    <br>
+
+    <section class="intro">
+        <div id="intro-container">
+            <div id="intro-info">
+                <h1>Achievement Atlas</h1>
+                <p class="description-text">
+                    Achievement Atlas is your personal roadmap to 100% completion in the games you love.
+                    We create tailored guides, strategies, and hands-on help designed around your skill level, playstyle, and goals.
+                    No generic walkthroughs—just exactly what you need to finish strong.
+                </p>
+                <button class="section-button-colored" href="#">Learn More</button>
+            </div>
+            <img id="intro-image" src="images/percentage_bars.png">
+        </div>
+    </section>
 
     <style>
         :root {
+            --body-color: #edefeb;
+
             --button-color: #a0e2e1;
             --button-border: #a0e2e1;
             --button-text-color: #1f6463;
@@ -23,31 +43,105 @@
             --button-hover-border: #c7eeed;
             --button-hover-text-color: #1f6463;
 
+            --button-padding: 1rem;
+            --button-radius: 25px;
+
+            --section-hover-color: #1b1f0a0f;
+
             --transition: .25s ease-in-out;
         }
 
         * {
-            font-family: Verdana, Geneva, Tahoma, sans-serif
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* font-size: 110%; */
+        }
+
+        body {
+            background-color: var(--body-color);
+            display: grid;
+            grid-template-areas:
+                "intro"
+                "services"
+                "pricing"
+                "reviews"
+                "faq";
         }
 
         nav {
             position: sticky;
+            display: flex;
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 50px;
+            justify-content: space-between;
+            width: 75%;
+            place-self: center;
+            align-items: center;
+            margin-top: 1rem;
         }
 
-        .nav-button {
+        nav > * {
+            padding: .5rem;
+        }
+
+        .section-button {
+            border-radius: var(--button-radius);
+            padding: var(--button-padding);
+            transition: var(--transition);
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .section-button:hover {
+            background-color: var(--section-hover-color);
+            transition: var(--transition);
+        }
+
+        .section-button-colored {
+            border-radius: var(--button-radius);
             background-color: var(--button-color);
             border: 1px solid var(--button-border);
             color: var(--button-text-color);
+            padding: var(--button-padding);
 
             transition: var(--transition);
         }
 
-        .nav-button:hover {
+        .section-button-colored:hover {
             background-color: var(--button-hover-color);
             border: 1px solid var(--button-hover-border);
             color: var(--button-hover-text-color);
 
             transition: var(--transition);
+        }
+
+        .description-text {
+            width: 75%;
+            place-self: start;
+        }
+
+        #intro {
+            grid-area: "intro";
+        }
+
+        #intro-container {
+            display: flex;
+            flex-direction: row;
+            width: 75%;
+            place-items: center;
+            align-items: center;
+            place-self: center;
+            justify-content: space-between;
+        }
+
+        #intro-text {
+            flex-direction: column;
+        }
+
+        #intro-image {
+            width: 50%;
+            height: 50%;
+            border-radius: 25px;
         }
     </style>
     <script>
