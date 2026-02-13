@@ -7,29 +7,70 @@
 </head>
 <body>
     <nav>
-        <h3 href="#intro">Achievement Atlas</h3>
-        <a class="section-button" href="#">Services</a>
+        <a href="#intro" id="atlas-header"><h3>Achievement Atlas</h3></a>
+        <a class="section-button" href="#services">Services</a>
         <a class="section-button" href="#">Reviews</a>
         <a class="section-button" href="#">FAQ</a>
         <button class="section-button-colored" href="#">See Pricing</button>
     </nav>
 
-    <br>
-
-    <section class="intro">
-        <div id="intro-container">
-            <div id="intro-info">
-                <h1>Achievement Atlas</h1>
-                <p class="description-text">
-                    Achievement Atlas is your personal roadmap to 100% completion in the games you love.
-                    We create tailored guides, strategies, and hands-on help designed around your skill level, playstyle, and goals.
-                    No generic walkthroughs—just exactly what you need to finish strong.
-                </p>
-                <button class="section-button-colored" href="#">Learn More</button>
+    <div id="page-content">
+        <section id="intro">
+            <div id="intro-container">
+                <div id="intro-info">
+                    <h1>Achievement Atlas</h1>
+                    <p class="description-text">
+                        Achievement Atlas is your personal roadmap to 100% completion in the games you love.
+                        We create tailored guides, strategies, and hands-on help designed around your skill level, playstyle, and goals.
+                        No generic walkthroughs—just exactly what you need to finish strong.
+                    </p>
+                    <button class="section-button-colored" href="#">Learn More</button>
+                </div>
+                <img id="intro-image" src="images/percentage_bars.png">
             </div>
-            <img id="intro-image" src="images/percentage_bars.png">
-        </div>
-    </section>
+        </section>
+        
+        <!-- <div class="visible-break"></div> -->
+    
+        <section id="services">
+            <h1>Services</h1>
+            <div id="services-container">
+                <div class="service">
+                    <div class="img-wrapper">
+                        <img class="service-image" src="images/achievement_guides.png">
+                    </div>
+                    <h3>Achievement Guides</h3>
+                    <p class="description-text">
+                        Custom-built achievement guides made specifically for you.
+                        We break down every requirement in a clear, efficient path based on how you play, not a one-size-fits-all checklist.
+                    </p>
+                    <button class="section-button-colored">Learn More</button>
+                </div>
+                <div class="service">
+                    <div class="img-wrapper">
+                        <img class="service-image" src="images/pro_strategy_coaching.png">
+                    </div>
+                    <h3>Pro Strategy Coaching</h3>
+                    <p class="description-text">
+                        One-on-one strategy sessions with experienced players who know the game inside and out.
+                        Get personalized tips, optimized routes, and answers to the exact things you're stuck on.
+                    </p>
+                    <button class="section-button-colored">Learn More</button>
+                </div>
+                <div class="service">
+                    <div class="img-wrapper">
+                        <img class="service-image" src="images/live_assist.png">
+                    </div>
+                    <h3>Live Assist</h3>
+                    <p class="description-text">
+                        Direct, real-time help from a professional who joins your game or call.
+                        Whether it's a tough boss, multiplayer achievement, or perfect run, we're there with you every step of the way.
+                    </p>
+                    <button class="section-button-colored">Learn More</button>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <style>
         :root {
@@ -44,7 +85,7 @@
             --button-hover-text-color: #1f6463;
 
             --button-padding: 1rem;
-            --button-radius: 25px;
+            --button-radius: 50px;
 
             --section-hover-color: #1b1f0a0f;
 
@@ -53,11 +94,20 @@
 
         * {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            /* font-size: 110%; */
+            /* font-size: 105%; */
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             background-color: var(--body-color);
+            margin: 0;
+        }
+
+        #page-content {
             display: grid;
             grid-template-areas:
                 "intro"
@@ -67,17 +117,24 @@
                 "faq";
         }
 
+        #atlas-header {
+            text-decoration: none;
+            color: #000000;
+        }
+
         nav {
             position: sticky;
+            top: 1rem;
+            border: 2px solid var(--button-border);
             display: flex;
             background-color: #ffffff;
-            padding: 1rem;
+            /* padding: .25rem; */
             border-radius: 50px;
-            justify-content: space-between;
+            justify-content: space-around;
             width: 75%;
             place-self: center;
             align-items: center;
-            margin-top: 1rem;
+            /* margin-top: 1rem; */
         }
 
         nav > * {
@@ -93,7 +150,7 @@
         }
 
         .section-button:hover {
-            background-color: var(--section-hover-color);
+            background-color: var(--button-hover-color);
             transition: var(--transition);
         }
 
@@ -117,21 +174,31 @@
 
         .description-text {
             width: 75%;
-            place-self: start;
+            justify-self: start;
+        }
+
+        .visible-break {
+            height: .25rem;
+            padding: .5rem;
+            max-width: 100%;
+            background-color:#000000;
+            box-sizing: border-box;
         }
 
         #intro {
-            grid-area: "intro";
+            grid-area: intro;
         }
 
         #intro-container {
             display: flex;
             flex-direction: row;
-            width: 75%;
+            height: 100vh;
+            width: 100%;
+            padding: 1rem;
             place-items: center;
             align-items: center;
             place-self: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
 
         #intro-text {
@@ -139,9 +206,47 @@
         }
 
         #intro-image {
-            width: 50%;
-            height: 50%;
+            width:  50vw;
+            height: 50vh;
             border-radius: 25px;
+        }
+
+        #services {
+            grid-area: services;
+            display: flex;
+            flex-direction: column;
+            place-self: center;
+            place-items: center;
+            width: 100%;
+        }
+
+        #services-container {
+            display: flex;
+            align-content: start;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .service {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .img-wrapper {
+            display: flex;
+            height: 33vh;
+            align-self: center;
+        }
+
+        .service-image {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 25px;
+            align-self: center;
         }
     </style>
     <script>
