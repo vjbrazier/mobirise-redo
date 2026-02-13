@@ -70,6 +70,30 @@
                 </div>
             </div>
         </section>
+
+        <section id="pricing">
+            <h1>Pricing</h1>
+            <div id="pricing-container">
+                <div class="price-card">
+                    <h3>
+                        Guides
+                        <p><strong>$5/</strong>Guide</p>
+                    </h3>
+                </div>
+                <div class="price-card">
+                    <h3>
+                        Coaching
+                        <p><strong>$15/</strong>Achievement</p>
+                    </h3>
+                </div>
+                <div class="price-card">
+                    <h3>
+                        Live Assist
+                        <p><strong>$30/</strong>Hour</p>
+                    </h3>
+                </div>
+            </div>
+        </section>
     </div>
 
     <style>
@@ -215,8 +239,8 @@
             grid-area: services;
             display: flex;
             flex-direction: column;
-            place-self: center;
-            place-items: center;
+            align-self: center;
+            align-items: center;
             width: 100%;
         }
 
@@ -247,6 +271,28 @@
             max-height: 100%;
             border-radius: 25px;
             align-self: center;
+        }
+
+        #pricing {
+            grid-area: pricing;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        #pricing-container {
+            display: flex;
+            align-content: start;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .price-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
     <script>
