@@ -15,7 +15,9 @@
         <a class="section-button" href="#services">Services</a>
         <a class="section-button" href="#">Reviews</a>
         <a class="section-button" href="#">FAQ</a>
-        <button class="section-button-colored" href="#">See Pricing</button>
+        <a id="pricing-button" href="#pricing">
+            <button class="section-button-colored">See Pricing</button>
+        </a>
     </nav>
 
     <section id="intro">
@@ -44,7 +46,7 @@
                     <img class="service-image" src="images/achievement_guides.png">
                 </div>
                 <h3>Achievement Guides</h3>
-                <p class="description-text">
+                <p class="service-desc">
                     Custom-built achievement guides made specifically for you.
                     We break down every requirement in a clear, efficient path based on how you play, not a
                     one-size-fits-all checklist.
@@ -56,7 +58,7 @@
                     <img class="service-image" src="images/pro_strategy_coaching.png">
                 </div>
                 <h3>Pro Strategy Coaching</h3>
-                <p class="description-text">
+                <p class="service-desc">
                     One-on-one strategy sessions with experienced players who know the game inside and out.
                     Get personalized tips, optimized routes, and answers to the exact things you're stuck on.
                 </p>
@@ -67,7 +69,7 @@
                     <img class="service-image" src="images/live_assist.png">
                 </div>
                 <h3>Live Assist</h3>
-                <p class="description-text">
+                <p class="service-desc">
                     Direct, real-time help from a professional who joins your game or call.
                     Whether it's a tough boss, multiplayer achievement, or perfect run, we're there with you every step
                     of the way.
@@ -80,25 +82,37 @@
     <div class="visible-break"></div>
 
     <section id="pricing">
-        <h1>Pricing</h1>
+        <h1 id="pricing-header">Pricing</h1>
         <div id="pricing-container">
             <div class="price-card">
-                <h3>
-                    Guides
-                    <p><strong>$5/</strong>Guide</p>
-                </h3>
+                <h3>Guides</h3>
+                <p><strong>$5/</strong>Guide</p>
+                <p>A custom guide tailored just for you.</p>
+                <ul>
+                    <li>Available for any game</li>
+                    <li>Tailored to your experience level</li>
+                </ul>
+                <button class="section-button-colored">Purchase a guide</button>
             </div>
             <div class="price-card">
-                <h3>
-                    Coaching
-                    <p><strong>$15/</strong>Achievement</p>
-                </h3>
+                <h3>Coaching</h3>
+                <p><strong>$15/</strong>Achievement</p>
+                <p>Have a brief strategy session, and get a much more personal guide for your goal.</p>
+                <ul>
+                    <li>Completely custom</li>
+                    <li>Created by a professional</li>
+                </ul>
+                <button class="section-button-colored">Select your achievement</button>
             </div>
             <div class="price-card">
-                <h3>
-                    Live Assist
-                    <p><strong>$30/</strong>Hour</p>
-                </h3>
+                <h3>Live Assist</h3>
+                <p><strong>$30/</strong>Hour</p>
+                <p>Live support from a professional.</p>
+                <ul>
+                    <li>Several professionals available</li>
+                    <li>Multiplayer and Singeplayer support</li>
+                </ul>
+                <button class="section-button-colored">Pick a professional</button>
             </div>
         </div>
     </section>
@@ -108,7 +122,7 @@
             --body-color: #edefeb;
 
             --button-color: #a0e2e1;
-            --button-border: #a0e2e1;
+            --button-border: #1f6463;
             --button-text-color: #1f6463;
 
             --button-hover-color: #c7eeed;
@@ -131,6 +145,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 7.5rem;
         }
 
         body {
@@ -158,7 +173,7 @@
             /* margin-top: 1rem; */
         }
 
-        nav>* {
+        nav > * {
             padding: .5rem;
         }
 
@@ -192,11 +207,6 @@
 
             transition: var(--transition);
         }
-/* 
-        .description-text {
-            width: 75%;
-            justify-self: start;
-        } */
 
         .visible-break {
             height: .25rem;
@@ -204,6 +214,10 @@
             max-width: 100%;
             background-color: #000000;
             box-sizing: border-box;
+        }
+
+        p, #intro-button {
+            font-size: 1.25rem;
         }
 
         #intro-container {
@@ -227,6 +241,10 @@
             padding: 3rem;
         }
 
+        #intro-header {
+            font-size: 2.5rem;
+        }
+
         #intro-image {
             grid-area: image;
             width: 50vw;
@@ -234,7 +252,8 @@
             border-radius: 25px;
         }
 
-        #services {            height: 100vh;
+        #services {            
+            height: 100vh;
             width: 100%;
         }
 
@@ -271,26 +290,45 @@
             align-self: center;
         }
 
+        .service-desc {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
         #pricing {
-            grid-area: pricing;
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-            align-items: center;
+            height: 100vh;
             width: 100%;
         }
 
+        #pricing-header {
+            place-self: center;
+        }
+
         #pricing-container {
-            display: flex;
-            align-content: start;
-            height: 100vh;
-            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            place-items: center;
         }
 
         .price-card {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            /* align-items: center; */
+            justify-content: space-evenly;
+            height: 100%;
+            width: 75%;
+            padding: 1rem;
+            border-radius: var(--button-radius);
+            border: 2px solid var(--button-border);
+            background-image: linear-gradient(
+                to bottom, 
+                var(--button-color) 0%,
+                var(--button-color) 33%,
+                var(--button-border) 33%,
+                var(--button-border) 33.5%,
+                #ffffff 33.5%,
+                #ffffff 100%
+            );
         }
     </style>
     <script>
