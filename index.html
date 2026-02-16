@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achievement Atlas</title>
 </head>
+
 <body>
     <nav>
-        <a href="#intro" id="atlas-header"><h3>Achievement Atlas</h3></a>
+        <a href="#intro" id="nav-header">
+            <h3>Achievement Atlas</h3>
+        </a>
         <a class="section-button" href="#services">Services</a>
         <a class="section-button" href="#">Reviews</a>
         <a class="section-button" href="#">FAQ</a>
         <button class="section-button-colored" href="#">See Pricing</button>
     </nav>
 
-    <div id="page-content">
-        <section id="intro">
-            <div id="intro-container">
-                <div id="intro-info">
-                    <h1>Achievement Atlas</h1>
-                    <p class="description-text">
-                        Achievement Atlas is your personal roadmap to 100% completion in the games you love.
-                        We create tailored guides, strategies, and hands-on help designed around your skill level, playstyle, and goals.
-                        No generic walkthroughs—just exactly what you need to finish strong.
-                    </p>
-                    <button class="section-button-colored" href="#">Learn More</button>
-                </div>
-                <img id="intro-image" src="images/percentage_bars.png">
+    <section id="intro">
+        <div id="intro-container">
+            <div id="intro-text-content">
+                <h1 id="intro-header">Achievement Atlas</h1>
+                <p id="intro-description">
+                    Achievement Atlas is your personal roadmap to 100% completion in the games you love.
+                    We create tailored guides, strategies, and hands-on help designed around your skill level,
+                    playstyle, and goals.
+                    No generic walkthroughs—just exactly what you need to finish strong.
+                </p>
+                <button id="intro-button" class="section-button-colored" href="#">Learn More</button>
             </div>
-        </section>
-        
-        <!-- <div class="visible-break"></div> -->
-    
-        <section id="services">
-            <h1>Services</h1>
-            <div id="services-container">
-                <div class="service">
-                    <div class="img-wrapper">
-                        <img class="service-image" src="images/achievement_guides.png">
-                    </div>
-                    <h3>Achievement Guides</h3>
-                    <p class="description-text">
-                        Custom-built achievement guides made specifically for you.
-                        We break down every requirement in a clear, efficient path based on how you play, not a one-size-fits-all checklist.
-                    </p>
-                    <button class="section-button-colored">Learn More</button>
-                </div>
-                <div class="service">
-                    <div class="img-wrapper">
-                        <img class="service-image" src="images/pro_strategy_coaching.png">
-                    </div>
-                    <h3>Pro Strategy Coaching</h3>
-                    <p class="description-text">
-                        One-on-one strategy sessions with experienced players who know the game inside and out.
-                        Get personalized tips, optimized routes, and answers to the exact things you're stuck on.
-                    </p>
-                    <button class="section-button-colored">Learn More</button>
-                </div>
-                <div class="service">
-                    <div class="img-wrapper">
-                        <img class="service-image" src="images/live_assist.png">
-                    </div>
-                    <h3>Live Assist</h3>
-                    <p class="description-text">
-                        Direct, real-time help from a professional who joins your game or call.
-                        Whether it's a tough boss, multiplayer achievement, or perfect run, we're there with you every step of the way.
-                    </p>
-                    <button class="section-button-colored">Learn More</button>
-                </div>
-            </div>
-        </section>
+            <img id="intro-image" src="images/percentage_bars.png">
+        </div>
+    </section>
 
-        <section id="pricing">
-            <h1>Pricing</h1>
-            <div id="pricing-container">
-                <div class="price-card">
-                    <h3>
-                        Guides
-                        <p><strong>$5/</strong>Guide</p>
-                    </h3>
+    <div class="visible-break"></div>
+
+    <section id="services">
+        <h1 id="services-header">Services</h1>
+        <div id="services-container">
+            <div class="service">
+                <div class="img-wrapper">
+                    <img class="service-image" src="images/achievement_guides.png">
                 </div>
-                <div class="price-card">
-                    <h3>
-                        Coaching
-                        <p><strong>$15/</strong>Achievement</p>
-                    </h3>
-                </div>
-                <div class="price-card">
-                    <h3>
-                        Live Assist
-                        <p><strong>$30/</strong>Hour</p>
-                    </h3>
-                </div>
+                <h3>Achievement Guides</h3>
+                <p class="description-text">
+                    Custom-built achievement guides made specifically for you.
+                    We break down every requirement in a clear, efficient path based on how you play, not a
+                    one-size-fits-all checklist.
+                </p>
+                <button class="section-button-colored">Learn More</button>
             </div>
-        </section>
-    </div>
+            <div class="service">
+                <div class="img-wrapper">
+                    <img class="service-image" src="images/pro_strategy_coaching.png">
+                </div>
+                <h3>Pro Strategy Coaching</h3>
+                <p class="description-text">
+                    One-on-one strategy sessions with experienced players who know the game inside and out.
+                    Get personalized tips, optimized routes, and answers to the exact things you're stuck on.
+                </p>
+                <button class="section-button-colored">Learn More</button>
+            </div>
+            <div class="service">
+                <div class="img-wrapper">
+                    <img class="service-image" src="images/live_assist.png">
+                </div>
+                <h3>Live Assist</h3>
+                <p class="description-text">
+                    Direct, real-time help from a professional who joins your game or call.
+                    Whether it's a tough boss, multiplayer achievement, or perfect run, we're there with you every step
+                    of the way.
+                </p>
+                <button class="section-button-colored">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="visible-break"></div>
+
+    <section id="pricing">
+        <h1>Pricing</h1>
+        <div id="pricing-container">
+            <div class="price-card">
+                <h3>
+                    Guides
+                    <p><strong>$5/</strong>Guide</p>
+                </h3>
+            </div>
+            <div class="price-card">
+                <h3>
+                    Coaching
+                    <p><strong>$15/</strong>Achievement</p>
+                </h3>
+            </div>
+            <div class="price-card">
+                <h3>
+                    Live Assist
+                    <p><strong>$30/</strong>Hour</p>
+                </h3>
+            </div>
+        </div>
+    </section>
 
     <style>
         :root {
@@ -131,17 +138,7 @@
             margin: 0;
         }
 
-        #page-content {
-            display: grid;
-            grid-template-areas:
-                "intro"
-                "services"
-                "pricing"
-                "reviews"
-                "faq";
-        }
-
-        #atlas-header {
+        #nav-header {
             text-decoration: none;
             color: #000000;
         }
@@ -161,7 +158,7 @@
             /* margin-top: 1rem; */
         }
 
-        nav > * {
+        nav>* {
             padding: .5rem;
         }
 
@@ -195,60 +192,61 @@
 
             transition: var(--transition);
         }
-
+/* 
         .description-text {
             width: 75%;
             justify-self: start;
-        }
+        } */
 
         .visible-break {
             height: .25rem;
             padding: .5rem;
             max-width: 100%;
-            background-color:#000000;
+            background-color: #000000;
             box-sizing: border-box;
         }
 
-        #intro {
-            grid-area: intro;
-        }
-
         #intro-container {
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-areas:
+                "desc image"
+            ;
             height: 100vh;
             width: 100%;
             padding: 1rem;
             place-items: center;
-            align-items: center;
             place-self: center;
-            justify-content: space-evenly;
         }
 
-        #intro-text {
+        #intro-text-content {
+            grid-area: desc;
+            display: flex;
             flex-direction: column;
+            align-items: start;
+            justify-self: center;
+            padding: 3rem;
         }
 
         #intro-image {
-            width:  50vw;
+            grid-area: image;
+            width: 50vw;
             height: 50vh;
             border-radius: 25px;
         }
 
-        #services {
-            grid-area: services;
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-            align-items: center;
+        #services {            height: 100vh;
             width: 100%;
         }
 
+        #services-header {
+            place-self: center;
+            justify-self: center;
+        }
+
         #services-container {
-            display: flex;
-            align-content: start;
-            height: 100vh;
-            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            place-content: center;
         }
 
         .service {
@@ -299,4 +297,5 @@
 
     </script>
 </body>
+
 </html>
