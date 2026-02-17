@@ -85,7 +85,7 @@
         <h1 id="pricing-header">Pricing</h1>
         <div id="pricing-container">
             <div class="price-card">
-                <h3>Guides</h3>
+                <h2>Guides</h2>
                 <p><strong>$5/</strong>Guide</p>
                 <p>A custom guide tailored just for you.</p>
                 <ul>
@@ -95,7 +95,7 @@
                 <button class="section-button-colored">Purchase a guide</button>
             </div>
             <div class="price-card">
-                <h3>Coaching</h3>
+                <h2>Coaching</h2>
                 <p><strong>$15/</strong>Achievement</p>
                 <p>Have a brief strategy session, and get a much more personal guide for your goal.</p>
                 <ul>
@@ -105,7 +105,7 @@
                 <button class="section-button-colored">Select your achievement</button>
             </div>
             <div class="price-card">
-                <h3>Live Assist</h3>
+                <h2>Live Assist</h2>
                 <p><strong>$30/</strong>Hour</p>
                 <p>Live support from a professional.</p>
                 <ul>
@@ -306,27 +306,29 @@
 
         #pricing-container {
             display: grid;
-            grid-template-columns: repeat(3, auto);
-            place-items: center;
+            grid-template-columns: repeat(3, 25%);
+            place-self: center;
+            justify-content: space-between;
+            width: 75%;
         }
-
+        
         .price-card {
             display: flex;
             flex-direction: column;
-            /* align-items: center; */
+            align-items: center;
             justify-content: space-evenly;
+            text-overflow: wrap;
             height: 100%;
-            width: 75%;
             padding: 1rem;
             border-radius: var(--button-radius);
             border: 2px solid var(--button-border);
             background-image: linear-gradient(
                 to bottom, 
                 var(--button-color) 0%,
-                var(--button-color) 33%,
-                var(--button-border) 33%,
-                var(--button-border) 33.5%,
-                #ffffff 33.5%,
+                var(--button-color) 40%,
+                var(--button-border) 40%,
+                var(--button-border) 40.5%,
+                #ffffff 40.5%,
                 #ffffff 100%
             );
         }
