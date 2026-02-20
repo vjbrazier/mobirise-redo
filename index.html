@@ -13,8 +13,8 @@
             <h3>Achievement Atlas</h3>
         </a>
         <a class="section-button" href="#services">Services</a>
-        <a class="section-button" href="#">Reviews</a>
-        <a class="section-button" href="#">FAQ</a>
+        <a class="section-button" href="#reviews">Reviews</a>
+        <a class="section-button" href="#faq">FAQ</a>
         <a id="pricing-button" href="#pricing">
             <button class="section-button-colored">See Pricing</button>
         </a>
@@ -51,7 +51,9 @@
                     We break down every requirement in a clear, efficient path based on how you play, not a
                     one-size-fits-all checklist.
                 </p>
-                <button class="section-button-colored">Learn More</button>
+                <a href="#guide-card">
+                    <button class="section-button-colored">Learn More</button>
+                </a>
             </div>
             <div class="service">
                 <div class="img-wrapper">
@@ -84,7 +86,7 @@
     <section id="pricing">
         <h1 id="pricing-header">Pricing</h1>
         <div id="pricing-container">
-            <div class="price-card">
+            <div id="guide-card" class="price-card">
                 <h2>Guides</h2>
                 <p><strong>$5/</strong>Guide</p>
                 <p>A custom guide tailored just for you.</p>
@@ -110,12 +112,69 @@
                 <p>Live support from a professional.</p>
                 <ul>
                     <li>Several professionals available</li>
-                    <li>Multiplayer and Singeplayer support</li>
+                    <li>Multiplayer and Singleplayer support</li>
                 </ul>
                 <button class="section-button-colored">Pick a professional</button>
             </div>
         </div>
     </section>
+
+    <div class="visible-break"></div>
+
+    <section id="reviews">
+        <div id="review-container">
+            <div class="review">
+                <div class="stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+                <p class="review-desc">
+                    “I've followed tons of guides before, but nothing compares to this.
+                    Achievement Atlas felt like it was made just for me, and I finally finished a game I'd been stuck on for years.”
+                </p>
+                <p class="review-author">
+                    Jennifer J. Omalley
+                </p>
+            </div>
+            <div class="review">
+                <div class="stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+                <p class="review-desc">
+                    “The live assist was unreal.
+                    Having someone actually walk me through the hardest achievements saved me so much time and frustration.”
+                </p>
+                <p class="review-author">
+                    Christian T. Jackson
+                </p>
+            </div>
+            <div class="review">
+                <div class="stars">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+                <p class="review-desc">
+                    “This turned achievement hunting from stressful to fun again.
+                    The strategies were clear, personal, and insanely effective."
+                </p>
+                <p class="review-author">
+                    Connie L. Raymond
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="visible-break"></div>
 
     <style>
         :root {
@@ -160,6 +219,7 @@
 
         nav {
             position: sticky;
+            z-index: 5;
             top: 1rem;
             border: 2px solid var(--button-border);
             display: flex;
@@ -331,6 +391,47 @@
                 #ffffff 40.5%,
                 #ffffff 100%
             );
+        }
+
+        #reviews {
+            height: 100vh;
+            width: 75%;
+            justify-self: center;
+            align-content: center;
+        }
+
+        #review-container {
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            place-self: center;
+            place-content: space-around;
+        }
+
+        .review {
+            align-items: space-evenly;
+        }
+
+        .review-desc, .review-author {
+            text-align: center;
+        }
+
+        .stars {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .star {
+            width: 50px;  
+            aspect-ratio: 1;
+            background: var(--button-color);
+            clip-path: polygon(50% 0,
+                calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+                calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+                calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+                calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+            ); 
+            clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
         }
     </style>
     <script>
