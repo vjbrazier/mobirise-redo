@@ -33,7 +33,9 @@
                 </p>
                 <button id="intro-button" class="section-button-colored" href="#">Learn More</button>
             </div>
-            <img id="intro-image" src="images/percentage_bars.png">
+            <div id="intro-img-wrapper">
+                <img id="intro-image" src="images/percentage_bars.png">
+            </div>
         </div>
     </section>
 
@@ -377,13 +379,20 @@
         #intro-container {
             display: grid;
             grid-template-areas:
-                "desc image"
+                "desc image image"
             ;
             height: 100vh;
             width: 100%;
             padding: 1rem;
             place-items: center;
             place-self: center;
+        }
+
+        @media screen and (max-width: 1130px) {
+            #intro-container {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         #intro-text-content {
@@ -399,22 +408,44 @@
             font-size: 2.5rem;
         }
 
+        #intro-img-wrapper {
+            display: flex;
+            height: 33vh;
+            align-self: center;
+        }
+
         #intro-image {
             grid-area: image;
-            width: 50vw;
-            height: 50vh;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
             border-radius: 25px;
+            align-self: center;
         }
 
         #services {            
-            height: 100vh;
+            height: 100%;
             width: 100%;
+            padding-bottom: 5rem;
         }
 
         #services-container {
             display: grid;
-            grid-template-columns: repeat(3, auto);
+            grid-template-columns: repeat(3, 33%);
             place-content: center;
+        }
+
+        @media screen and (max-width: 1460px) {
+            #services-container {
+                grid-template-columns: repeat(2, 50%)
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            #services-container {
+                grid-template-columns: repeat(1, 100%);
+            }
         }
 
         .service {
@@ -445,16 +476,30 @@
         }
 
         #pricing {
-            height: 100vh;
+            height: 100%;
             width: 100%;
+            padding-bottom: 5rem;
         }
 
         #pricing-container {
             display: grid;
-            grid-template-columns: repeat(3, 25%);
+            grid-template-columns: repeat(3, 33%);
+            gap: 1rem;
             place-self: center;
             justify-content: space-between;
             width: 75%;
+        }
+
+        @media screen and (max-width: 1200px) {
+            #pricing-container {
+                grid-template-columns: repeat(2, 50%);
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            #pricing-container {
+                grid-template-columns: repeat(1, 100%);
+            }
         }
         
         .price-card {
@@ -462,6 +507,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
+            gap: 1rem;
             text-overflow: wrap;
             height: 100%;
             padding: 1rem;
@@ -490,6 +536,19 @@
             grid-template-columns: repeat(3, 33%);
             place-self: center;
             place-content: space-around;
+            gap: 1rem;
+        }
+
+        @media screen and (max-width: 950px) {
+            #review-container {
+                grid-template-columns: repeat(2, 50%);
+            }
+        }
+
+        @media screen and (max-width: 850px) {
+            #review-container {
+                grid-template-columns: repeat(1, 100%);
+            }
         }
 
         .review {
