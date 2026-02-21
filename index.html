@@ -13,6 +13,7 @@
         <a href="#intro" id="nav-header">
             <h3>Achievement Atlas</h3>
         </a>
+        <button id="hamburger">☰</button>
         <a class="section-button" href="#services">Services</a>
         <a class="section-button" href="#reviews">Reviews</a>
         <a class="section-button" href="#faq">FAQ</a>
@@ -34,7 +35,7 @@
                 <button id="intro-button" class="section-button-colored" href="#">Learn More</button>
             </div>
             <div id="intro-img-wrapper">
-                <img id="intro-image" src="images/percentage_bars.png">
+                <img id="intro-image" src="https://github.com/vjbrazier/mobirise-site/blob/main/images/percentage_bars.png?raw=true">
             </div>
         </div>
     </section>
@@ -43,83 +44,14 @@
 
     <section id="services">
         <h1 class="section-header">Services</h1>
-        <div id="services-container">
-            <div class="service">
-                <div class="img-wrapper">
-                    <img class="service-image" src="images/achievement_guides.png">
-                </div>
-                <h3>Achievement Guides</h3>
-                <p class="service-desc">
-                    Custom-built achievement guides made specifically for you.
-                    We break down every requirement in a clear, efficient path based on how you play, not a
-                    one-size-fits-all checklist.
-                </p>
-                <a href="#guide-card">
-                    <button class="section-button-colored">Learn More</button>
-                </a>
-            </div>
-            <div class="service">
-                <div class="img-wrapper">
-                    <img class="service-image" src="images/pro_strategy_coaching.png">
-                </div>
-                <h3>Pro Strategy Coaching</h3>
-                <p class="service-desc">
-                    One-on-one strategy sessions with experienced players who know the game inside and out.
-                    Get personalized tips, optimized routes, and answers to the exact things you're stuck on.
-                </p>
-                <button class="section-button-colored">Learn More</button>
-            </div>
-            <div class="service">
-                <div class="img-wrapper">
-                    <img class="service-image" src="images/live_assist.png">
-                </div>
-                <h3>Live Assist</h3>
-                <p class="service-desc">
-                    Direct, real-time help from a professional who joins your game or call.
-                    Whether it's a tough boss, multiplayer achievement, or perfect run, we're there with you every step
-                    of the way.
-                </p>
-                <button class="section-button-colored">Learn More</button>
-            </div>
-        </div>
+        <div id="services-container"></div>
     </section>
 
     <div class="visible-break"></div>
 
     <section id="pricing">
         <h1 class="section-header">Pricing</h1>
-        <div id="pricing-container">
-            <div id="guide-card" class="price-card">
-                <h2>Guides</h2>
-                <p><strong>$5/</strong>Guide</p>
-                <p>A custom guide tailored just for you.</p>
-                <ul>
-                    <li>Available for any game</li>
-                    <li>Tailored to your experience level</li>
-                </ul>
-                <button class="section-button-colored">Purchase a guide</button>
-            </div>
-            <div class="price-card">
-                <h2>Coaching</h2>
-                <p><strong>$15/</strong>Achievement</p>
-                <p>Have a brief strategy session, and get a much more personal guide for your goal.</p>
-                <ul>
-                    <li>Completely custom</li>
-                    <li>Created by a professional</li>
-                </ul>
-                <button class="section-button-colored">Select your achievement</button>
-            </div>
-            <div class="price-card">
-                <h2>Live Assist</h2>
-                <p><strong>$30/</strong>Hour</p>
-                <p>Live support from a professional.</p>
-                <ul>
-                    <li>Several professionals available</li>
-                    <li>Multiplayer and Singleplayer support</li>
-                </ul>
-                <button class="section-button-colored">Pick a professional</button>
-            </div>
-        </div>
+        <div id="pricing-container"></div>
     </section>
 
     <div class="visible-break"></div>
@@ -252,13 +184,13 @@
         <h1 class="section-header">Socials</h1>
         <div id="social-links">
             <a id="facebook" class="social-link" href="https://facebook.com">
-                <img class="social-image" src="images/facebook-icon.svg" height="16px" width="16px">
+                <img class="social-image" src="https://raw.githubusercontent.com/vjbrazier/mobirise-site/e8c686e9bfa7a95d9c0f5dc9b2984dca4c7f6534/images/facebook-icon.svg" height="16px" width="16px">
             </a>
             <a id="github" class="social-link" href="https://github.com">
-                <img class="social-image" src="images/github-icon.svg" height="16px" width="16px">
+                <img class="social-image" src="https://raw.githubusercontent.com/vjbrazier/mobirise-site/e8c686e9bfa7a95d9c0f5dc9b2984dca4c7f6534/images/github-icon.svg" height="16px" width="16px">
             </a>
             <a id="instagram" class="social-link" href="https://instagram.com">
-                <img class="social-image" src="images/instagram-icon.svg" height="16px" width="16px">
+                <img class="social-image" src="https://raw.githubusercontent.com/vjbrazier/mobirise-site/e8c686e9bfa7a95d9c0f5dc9b2984dca4c7f6534/images/instagram-icon.svg" height="16px" width="16px">
             </a>
         </div>
         <p>© Copyright 2026 Achievement Atlas - All Rights Reserved</p>
@@ -304,6 +236,35 @@
         body {
             background-color: var(--body-color);
             margin: 0;
+        }
+
+        #hamburger {
+            display: none;
+            font-size: 26px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 770px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        
+            #hamburger {
+                display: block;
+            }
+        
+            nav a:not(#nav-header), nav #pricing-button {
+                display: none;
+                width: 100%;
+            }
+        
+            nav.open a:not(#nav-header), nav.open #pricing-button {
+                display: block;
+            }
         }
 
         #nav-header {
@@ -434,6 +395,7 @@
             display: grid;
             grid-template-columns: repeat(3, 33%);
             place-content: center;
+            gap: 1rem;
         }
 
         @media screen and (max-width: 1460px) {
@@ -515,12 +477,8 @@
             border: 2px solid var(--button-border);
             background-image: linear-gradient(
                 to bottom, 
-                var(--button-color) 0%,
-                var(--button-color) 40%,
-                var(--button-border) 40%,
-                var(--button-border) 40.5%,
-                #ffffff 40.5%,
-                #ffffff 100%
+                var(--button-color),
+                #ffffff
             );
         }
 
@@ -614,13 +572,13 @@
             height: 100%;
         }
 
-        .up::after {
+        /* .up::after {
             content: "▲";
         }
 
         .down::after {
             content: "▼";
-        }
+        } */
 
         .hidden {
             font-size: 0px;
@@ -661,10 +619,95 @@
         }
     </style>
     <script>
-        // Debugging/Stying Setup
-        window.addEventListener('resize', () => {
+        const prnt = (msg) => console.log(msg);
+
+        const nav = document.querySelector("nav");
+        const hamburger = document.getElementById("hamburger");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 770) {
+                nav.classList.remove("open");
+            }
+
+            // Debuggging
             document.getElementById('ratio').innerText = window.innerWidth + ' x ' + window.innerHeight;
         });
+
+        async function getServices() {
+            try {
+                const servicesContainer = document.getElementById('services-container');
+                const pricingContainer = document.getElementById('pricing-container');
+                
+                const response = await fetch('https://vjbrazier.github.io/mobirise-site/db.json');
+
+                const data = await response.json();
+                // prnt(data);
+
+                const services = Object.values(data);
+
+                for (let service of services) {
+                    prnt(service);
+
+                    // Service card creation
+                    let newService = document.createElement('div');
+                    newService.classList.add('service');
+
+                    let serviceImageWrapper = document.createElement('div');
+                    serviceImageWrapper.classList.add('img-wrapper');
+                    let serviceImage = document.createElement('img');
+                    serviceImage.classList.add('service-image');
+                    serviceImage.src = service.image_link;
+                    serviceImageWrapper.append(serviceImage);
+                    newService.append(serviceImageWrapper);
+
+                    let serviceName = document.createElement('h3');
+                    serviceName.textContent = service.name;
+                    newService.append(serviceName);
+
+                    let description = document.createElement('p');
+                    description.classList.add('service-desc');
+                    description.textContent = service.service_description
+                    newService.append(description);
+
+                    servicesContainer.append(newService);
+
+                    // Price card creation
+                    let newPrice = document.createElement('div');
+                    newPrice.classList.add('price-card');
+
+                    let priceName = document.createElement('h2');
+                    priceName.textContent = service.name;
+                    newPrice.append(priceName);
+
+                    let priceDesc = document.createElement('p');
+                    priceDesc.textContent = '$' + service.price + '/' + service.pricing_unit;
+                    newPrice.append(priceDesc);
+
+                    let list = document.createElement('ul');
+                    for (let point of service.points) {
+                        let list_item = document.createElement('li');
+                        list_item.textContent = point;
+                        list.append(list_item);
+                    }
+                    newPrice.append(list);
+
+                    let button = document.createElement('button');
+                    button.classList.add('section-button-colored');
+                    button.textContent = 'Purchase ' + service.name;
+                    newPrice.append(button);
+
+                    pricingContainer.append(newPrice);
+                }
+            } catch (error) {
+                prnt(`Error caught: ${error}`);
+            }
+        }
+
+        getServices();
     </script>
 </body>
 
