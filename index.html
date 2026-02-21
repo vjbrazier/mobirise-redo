@@ -244,6 +244,24 @@
         </div>
     </section>
 
+    <!-- <div class="visible-break"></div> -->
+
+    <footer>
+        <h1 class="section-header">Socials</h1>
+        <div id="social-links">
+            <a id="facebook" class="social-link" href="https://facebook.com">
+                <img class="social-image" src="images/facebook-icon.svg" height="16px" width="16px">
+            </a>
+            <a id="github" class="social-link" href="https://github.com">
+                <img class="social-image" src="images/github-icon.svg" height="16px" width="16px">
+            </a>
+            <a id="instagram" class="social-link" href="https://instagram.com">
+                <img class="social-image" src="images/instagram-icon.svg" height="16px" width="16px">
+            </a>
+        </div>
+        <p>© Copyright 2026 Achievement Atlas - All Rights Reserved</p>
+    </footer>
+
     <style>
         :root {
             --body-color: #edefeb;
@@ -262,6 +280,12 @@
             --section-hover-color: #1b1f0a0f;
 
             --transition: .25s ease-in-out;
+        }
+
+        #ratio {
+            position: sticky;
+            top: 1px;
+            z-index: 6;
         }
 
         * {
@@ -496,7 +520,8 @@
         }
 
         #faq {
-            height: 100vh;
+            height: auto;
+            padding-bottom: 5rem;
         }
 
         #faq-header {
@@ -541,6 +566,39 @@
         .hidden {
             font-size: 0px;
             transition: var(--transition);
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            height: 25vh;
+            background-color: #ffffff;
+            align-items: center;
+        }
+
+        #social-links {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .social-link {
+            background-color: var(--button-color);
+            border: 1px solid var(--button-border);
+            border-radius: var(--button-radius);
+            padding: 1rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--button-hover-color);
+            border: 1px solid var(--button-hover-border);
+            transition: var(--transition);
+        }
+
+        .social-image {
+            width: 2.5rem;
+            height: 2.5rem;
         }
     </style>
     <script>
