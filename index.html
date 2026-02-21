@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <h1 id="ratio"></h1>
     <nav>
         <a href="#intro" id="nav-header">
             <h3>Achievement Atlas</h3>
@@ -39,7 +40,7 @@
     <div class="visible-break"></div>
 
     <section id="services">
-        <h1 id="services-header">Services</h1>
+        <h1 class="section-header">Services</h1>
         <div id="services-container">
             <div class="service">
                 <div class="img-wrapper">
@@ -84,7 +85,7 @@
     <div class="visible-break"></div>
 
     <section id="pricing">
-        <h1 id="pricing-header">Pricing</h1>
+        <h1 class="section-header">Pricing</h1>
         <div id="pricing-container">
             <div id="guide-card" class="price-card">
                 <h2>Guides</h2>
@@ -122,6 +123,7 @@
     <div class="visible-break"></div>
 
     <section id="reviews">
+        <h1 class="section-header">Reviews</h1>
         <div id="review-container">
             <div class="review">
                 <div class="stars">
@@ -177,67 +179,66 @@
     <div class="visible-break"></div>
 
     <section id="faq">
-        <h1 id="faq-header">FAQ</h1>
+        <h1 class="section-header">FAQ</h1>
 
         <div id="faq-container">
             <div class="faq-box">
                 <div class="faq-dropdown">
                     <h1>What games do you support?</h1>
-                    <p class="dropdown">V</p>
+                    <p class="dropdown down"></p>
                 </div>
-                <p class="faq-hidden">
+                <p class="faq-desc">
                 We support a wide range of popular and indie games, with more added regularly.
                 If a game matters to you, chances are we can help with it.
                 </p>
             </div>
             <div class="faq-box">
                 <div class="faq-dropdown">
-                    <h1>What games do you support?</h1>
-                    <p class="dropdown">V</p>
+                    <h1>Are guides really personalized?</h1>
+                    <p class="dropdown down"></p>
                 </div>
-                <p class="faq-hidden">
-                We support a wide range of popular and indie games, with more added regularly.
-                If a game matters to you, chances are we can help with it.
+                <p class="faq-desc">
+                Yes! Everything is tailored to your experience level, progress, and preferred playstyle.
+                You won't get recycled or generic walkthroughs.
                 </p>
             </div>
             <div class="faq-box">
                 <div class="faq-dropdown">
-                    <h1>What games do you support?</h1>
-                    <p class="dropdown">V</p>
+                    <h1>Do I need to be good at the game already?</h1>
+                    <p class="dropdown down"></p>
                 </div>
-                <p class="faq-hidden">
-                We support a wide range of popular and indie games, with more added regularly.
-                If a game matters to you, chances are we can help with it.
+                <p class="faq-desc">
+                Not at all. Achievement Atlas is built for all skill levels,
+                from casual players to hardcore completionists.
                 </p>
             </div>
             <div class="faq-box">
                 <div class="faq-dropdown">
-                    <h1>What games do you support?</h1>
-                    <p class="dropdown">V</p>
+                    <h1>How do you find my achievements and playstyle?</h1>
+                    <p class="dropdown down"></p>
                 </div>
-                <p class="faq-hidden">
-                We support a wide range of popular and indie games, with more added regularly.
-                If a game matters to you, chances are we can help with it.
+                <p class="faq-desc">
+                Your achievements are found by entering your username, you must make it public.
+                As for skill level, each game has a custom quiz that lets us determine it per game.
                 </p>
             </div>
             <div class="faq-box">
                 <div class="faq-dropdown">
-                    <h1>What games do you support?</h1>
-                    <p class="dropdown">V</p>
+                    <h1>Can I use more than one service?</h1>
+                    <p class="dropdown down"></p>
                 </div>
-                <p class="faq-hidden">
-                We support a wide range of popular and indie games, with more added regularly.
-                If a game matters to you, chances are we can help with it.
+                <p class="faq-desc">
+                Absolutely. Many players combine services for the best possible experience!
                 </p>
             </div>
             <div class="faq-box">
                 <div class="faq-dropdown">
-                    <h1>What games do you support?</h1>
-                    <p class="dropdown">V</p>
+                    <h1>Do you offer refunds if I can't be helped?</h1>
+                    <p class="dropdown down"></p>
                 </div>
-                <p class="faq-hidden">
-                We support a wide range of popular and indie games, with more added regularly.
-                If a game matters to you, chances are we can help with it.
+                <p class="faq-desc">
+                We do not offer refunds. However, you can write an appeal if a professional was no cooperative,
+                and if it is accepted, we will offer free services until you get what you originally paid for.
                 </p>
             </div>
         </div>
@@ -291,13 +292,11 @@
             border: 2px solid var(--button-border);
             display: flex;
             background-color: #ffffff;
-            /* padding: .25rem; */
             border-radius: 50px;
             justify-content: space-around;
-            width: 75%;
+            width: 80%;
             place-self: center;
             align-items: center;
-            /* margin-top: 1rem; */
         }
 
         nav > * {
@@ -343,6 +342,10 @@
             box-sizing: border-box;
         }
 
+        .section-header {
+            place-self: center;
+        }
+
         p, #intro-button {
             font-size: 1.25rem;
         }
@@ -384,11 +387,6 @@
             width: 100%;
         }
 
-        #services-header {
-            place-self: center;
-            justify-self: center;
-        }
-
         #services-container {
             display: grid;
             grid-template-columns: repeat(3, auto);
@@ -425,10 +423,6 @@
         #pricing {
             height: 100vh;
             width: 100%;
-        }
-
-        #pricing-header {
-            place-self: center;
         }
 
         #pricing-container {
@@ -503,7 +497,6 @@
 
         #faq {
             height: 100vh;
-            width: 75%;
         }
 
         #faq-header {
@@ -514,7 +507,10 @@
         #faq-container {
             display: flex;
             flex-direction: column;
+            place-items: center;
             gap: 1rem;
+            width: 75%;
+            place-self: center;
         }
 
         .faq-box {
@@ -522,20 +518,36 @@
             border-radius: var(--button-radius);
             border: 1px solid var(--button-border);
             padding: 1rem;
+            width: 100%;
         }
 
         .faq-dropdown {
             display: flex;
             justify-content: space-between;
-            /* padding: 1rem; */
         }
 
-        .faq-hidden {
-            display: none;
+        .faq-desc {
+            height: 100%;
+        }
+
+        .up::after {
+            content: "▲";
+        }
+
+        .down::after {
+            content: "▼";
+        }
+
+        .hidden {
+            font-size: 0px;
+            transition: var(--transition);
         }
     </style>
     <script>
-
+        // Debugging/Stying Setup
+        window.addEventListener('resize', () => {
+            document.getElementById('ratio').innerText = window.innerWidth + ' x ' + window.innerHeight;
+        });
     </script>
 </body>
 
